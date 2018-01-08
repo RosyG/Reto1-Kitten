@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;/*para que los elemento no se desborden*/
+}
+
+.container {
+  background-size: 100% 100%;
+  margin: 0 auto; /*para centrar el contenedor.*/
+  height: 90vh;/*Altura para el contenedor de las imagenes.*/
+}
+
+.container > section{
+    max-width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;/*para que las medidas del gato sean con respecto a su padre el contenedor, que a su vez tiene el fondo*/
+}
+
+/*Modificando la visualización de escritorio a móvil */
+@media (max-width: 412px) {
+  .container {
+    background-image: url("../img/dawn.png");
+    height: 80vh;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+  }
+  .img-cat {
+    background-image: url("../img/kitten-large.png");
+    height: 22%;
+    margin-top: 25%;
+    width: 63%;
+    margin-left: 17%;
+  }
+}/*handheld, se usa para pequeños dispositivos de mano, como móviles*/
+
+@media (min-width: 413px) and (max-width: 999px){
+  .container {
+    background-image: url("../img/night.jpg"); height: 50vh;
+  }
+  .img-cat {
+    background-image: url("../img/kitten-small.png");
+    height: 40%;
+    width: 60%;
+    margin: 5% 20% 0%;
+  }
+}
+
+
+@media  (min-width: 1000px){
+/*Se mantiene hasta 1024*/
+  .container {
+    background-image: url("../img/sunny-day.jpg");
+  }
+
+  .img-cat {
+    background-image: url("../img/kitten-medium.png");
+    height: 30%;
+    width: 63%;
+    margin: 18% 18% 0%;
+  }
+}
+/*medidas de las pantallas que serán especificadas*/
